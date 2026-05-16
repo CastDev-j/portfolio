@@ -4,6 +4,7 @@ import { IoMenu, IoClose } from "react-icons/io5";
 const routes = {
   home: "#home",
   certificates: "#certificates",
+  projects: "#projects",
   contact: "#contact",
 };
 
@@ -11,11 +12,13 @@ const translations = {
   es: {
     home: "Inicio",
     certificates: "Certificados",
+    projects: "Proyectos",
     contact: "Contacto",
   },
   en: {
     home: "Home",
     certificates: "Certificates",
+    projects: "Projects",
     contact: "Contact",
   },
 };
