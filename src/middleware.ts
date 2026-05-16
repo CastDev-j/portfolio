@@ -1,4 +1,3 @@
-import { getActionContext } from "astro:actions";
 import { env } from "cloudflare:workers";
 import { defineMiddleware, sequence } from "astro:middleware";
 
