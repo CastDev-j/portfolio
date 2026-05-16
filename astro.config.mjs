@@ -4,6 +4,8 @@ import { defineConfig, fontProviders, passthroughImageService } from 'astro/conf
 import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
 
+import cloudflare from '@astrojs/cloudflare';
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -24,5 +26,7 @@ export default defineConfig({
   i18n: {
     locales: ["es", "en"],
     defaultLocale: "es",
-  }
+  },
+
+  adapter: cloudflare()
 });
