@@ -3,22 +3,22 @@ import { IoMenu, IoClose } from "react-icons/io5";
 
 const routes = {
   home: "#home",
-  certificates: "#certificates",
   projects: "#projects",
+  certificates: "#certificates",
   contact: "#contact",
 };
 
 const translations = {
   es: {
     home: "Inicio",
-    certificates: "Certificados",
     projects: "Proyectos",
+    certificates: "Certificados",
     contact: "Contacto",
   },
   en: {
     home: "Home",
-    certificates: "Certificates",
     projects: "Projects",
+    certificates: "Certificates",
     contact: "Contact",
   },
 };
