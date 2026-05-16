@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+    --color-sea-nymph-50: #f4f9f8;
+    --color-sea-nymph-100: #dbecea;
+    --color-sea-nymph-200: #b7d8d5;
+    --color-sea-nymph-300: #8bbdba;
+    --color-sea-nymph-400: #73a8a6;
+    --color-sea-nymph-500: #498382;
+    --color-sea-nymph-600: #396868;
+    --color-sea-nymph-700: #305555;
+    --color-sea-nymph-800: #2a4445;
+    --color-sea-nymph-900: #263b3b;
+    --color-sea-nymph-950: #122021;
+}
+
+@layer base {
+    html {
+        font-family: var(--font-main);
+        scroll-behavior: smooth;
+    }
+}
