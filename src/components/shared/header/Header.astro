@@ -17,7 +17,7 @@ const { locale } = Astro.props;
       <LuCodeXml className="text-2xl text-sea-nymph-600" />
       <div class="text-sea-nymph-600 font-bold text-xl">CastDev-j</div>
     </article>
-    <div class="flex items-center gap-8 md:gap-12 md:flex-row-reverse">
+    <div class="flex items-center gap-8 lg:gap-12 lg:flex-row-reverse">
       <LanguageSelector locale={locale} client:load transition:persist />
       <Navigation locale={locale} client:load transition:persist />
     </div>

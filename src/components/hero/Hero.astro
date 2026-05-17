@@ -10,7 +10,7 @@ const { locale } = Astro.props;
 
 const translations = {
   es: {
-    hero: "Hola, soy Andrés Castillo",
+    hero: "Hola, soy Andrés",
     description:
       "Ingeniero en Sistemas Computacionales en formación, especializado en interfaces rápidas, accesibles y experiencias 3D interactivas. Con 3 años de experiencia en React, Next.js, Astro y Three.js, transformo ideas en productos digitales escalables con enfoque en rendimiento y UX.",
     descriptionShort:
@@ -18,7 +18,7 @@ const translations = {
     cta: "Ver proyectos",
   },
   en: {
-    hero: "Hi, I'm Andrés Castillo",
+    hero: "Hi, I'm Andrés",
     description:
       "Computer Systems Engineering student, specializing in fast, accessible interfaces and interactive 3D experiences. With 3 years of experience in React, Next.js, Astro and Three.js, I transform ideas into scalable digital products focused on performance and UX.",
     descriptionShort:
@@ -31,20 +31,20 @@ const translations = {
 <main class="flex p-4 w-full items-center justify-center">
   <section
     id="home"
-    class="flex max-w-5xl w-full md:flex-row sm:flex-row gap-2 sm:gap-4 flex-col-reverse"
+    class="flex max-w-5xl w-full lg:flex-row gap-2 sm:gap-4 flex-col-reverse"
   >
     <article
-      class="w-full flex flex-col gap-2 md:gap-4 items-center justify-center text-center md:items-start md:text-left"
+      class="w-full flex flex-col gap-2 lg:gap-4 items-center justify-center text-center lg:items-start lg:text-left"
     >
-      <h1 class="text-2xl md:text-4xl font-bold text-sea-nymph-800">
+      <h1 class="text-2xl lg:text-4xl font-bold text-sea-nymph-800">
         {translations[locale].hero}
       </h1>
 
       <p class="text-sea-nymph-600 text-lg leading-relaxed">
-        <span class="block md:hidden"
+        <span class="block lg:hidden"
           >{translations[locale].descriptionShort}</span
         >
-        <span class="hidden md:block">{translations[locale].description}</span>
+        <span class="hidden lg:block">{translations[locale].description}</span>
       </p>
 
       <a
@@ -54,8 +54,6 @@ const translations = {
         {translations[locale].cta}
       </a>
     </article>
-    <article class="w-full h-84 sm:h-164 bg-sea-nymph-100">
-      <Experience transition:persist client:load />
-    </article>
+    <Experience transition:persist client:load />
   </section>
 </main>

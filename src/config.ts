@@ -16,7 +16,7 @@ export const socials: Socials = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    text: "andres-castillo",
+    text: "andres",
     href: "https://www.linkedin.com/in/andres-castillo-jimenez-249210292/",
   },
   {

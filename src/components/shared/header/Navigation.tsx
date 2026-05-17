@@ -32,7 +32,7 @@ const Navigation = ({ locale }: Props) => {
 
   return (
     <>
-      <ul className="gap-6 hidden md:flex">
+      <ul className="gap-6 hidden lg:flex">
         {Object.entries(routes).map(([key, value]) => (
           <li key={key}>
             <a
@@ -47,7 +47,7 @@ const Navigation = ({ locale }: Props) => {
       </ul>
 
       <button
-        className="flex md:hidden p-2 text-sea-nymph-600 hover:text-sea-nymph-800 transition-colors z-10 relative"
+        className="flex lg:hidden p-2 text-sea-nymph-600 hover:text-sea-nymph-800 transition-colors z-10 relative"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         aria-label="Menú"
       >
