@@ -1,12 +1,6 @@
+import { routes } from "@/config";
 import React, { useState } from "react";
 import { IoMenu, IoClose } from "react-icons/io5";
-
-const routes = {
-  home: "#home",
-  projects: "#projects",
-  certificates: "#certificates",
-  contact: "#contact",
-};
 
 const translations = {
   es: {

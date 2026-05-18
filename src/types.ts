@@ -5,10 +5,18 @@ export type Socials = {
   href: string;
 }[];
 
-export type Certificates = {
+export type Certificate = {
   title: string;
+  titleEn: string;
   url: string;
   logo: string;
-}[];
+  source: "threejs" | "devtalles";
+};
+
+export type Certificates = Certificate[];
 
 export type Locale = "es" | "en";
+
+export type Coin = "coin-1" | "coin-2";
+
+export type CertificateSource = "threejs" | "devtalles";

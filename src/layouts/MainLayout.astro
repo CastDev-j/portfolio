@@ -1,10 +1,17 @@
 ---
+import Header from "@/components/shared/header/Header.astro";
 import "@/styles/global.css";
+import type { Locale } from "@/types";
 import { Font } from "astro:assets";
 import { ClientRouter } from "astro:transitions";
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props as Props;
 ---
 
-<html lang="es">
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -60,6 +67,9 @@ import { ClientRouter } from "astro:transitions";
     <title>Portfolio</title>
   </head>
   <body>
-    <slot />
+    <Header locale={locale} />
+    <div class="flex flex-col gap-16 lg:gap-34">
+      <slot />
+    </div>
   </body>
 </html>

@@ -1,0 +1,40 @@
+---
+import type { Locale } from "@/types";
+import Experience from "./Experience";
+import CertificateList from "./CertificateList";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const translations = {
+  es: { title: "Certificaciones" },
+  en: { title: "Certifications" },
+};
+---
+
+<section
+  id="certificates"
+  class="flex flex-col w-full items-center justify-center gap-4 min-h-screen relative"
+>
+  <Experience transition:persist client:load />
+  <article
+    class="bg-sea-nymph-500 py-8 w-full flex flex-col gap-2 items-center rounded-[50%_50%_0px_0px_/25px_25px_0px_0px] lg:rounded-[50%_50%_0px_0px_/55px_55px_0px_0px] pt-12 -mt-18 z-40"
+  >
+    <h1 class="text-4xl font-semibold text-sea-nymph-50">
+      {translations[locale].title}
+    </h1>
+    <p class="text-sea-nymph-200 text-sm">
+      {
+        locale === "es"
+          ? "Selecciona una categoría para ver las certificaciones"
+          : "Select a category to view certifications"
+      }
+    </p>
+    <CertificateList client:load locale={locale} />
+  </article>
+
+  <section class="min-h-screen"></section>
+</section>
