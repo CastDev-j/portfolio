@@ -20,4 +20,10 @@
       },
     },
   ],
+  "kv_namespaces": [
+    {
+      "binding": "SESSION",
+      "id": "my-portfolio-session-v1",
+    },
+  ],
 }
