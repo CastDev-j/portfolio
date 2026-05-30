@@ -1,4 +1,5 @@
 ---
+import Footer from "@/components/shared/Footer.astro";
 import Header from "@/components/shared/header/Header.astro";
 import "@/styles/global.css";
 import type { Locale } from "@/types";
@@ -71,5 +72,6 @@ const { locale } = Astro.props as Props;
     <div class="flex flex-col gap-16">
       <slot />
     </div>
+    <Footer locale={locale} />
   </body>
 </html>

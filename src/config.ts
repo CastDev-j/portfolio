@@ -1,4 +1,4 @@
-import type { Certificates, Socials } from "./types";
+import type { Certificates, Experiences, Socials } from "./types";
 
 export const routes = {
   home: "#home",
@@ -146,5 +146,65 @@ export const certificates: Certificates = [
     url: "https://cursos.devtalles.com/certificates/jgdygum41r",
     logo: "https://import.cdn.thinkific.com/643563%2Fcustom_site_themes%2Fid%2FD0U6aCTrQPmlGzQXLZhe_DEVTALLES-LOGO-VARIANTES.png",
     source: "devtalles",
+  },
+];
+
+export const experiences: Experiences = [
+  {
+    title: "Tecnológico Nacional de México Campus Celaya",
+    titleEn: "Tecnológico Nacional de México Campus Celaya",
+    subtitle: "Ingeniería en Sistemas Computacionales",
+    subtitleEn: "Computer Systems Engineering",
+    date: "Agosto 2023 – Junio 2028",
+    dateEn: "August 2023 – June 2028",
+    description: [
+      "Formación en desarrollo de software, arquitectura de sistemas y tecnologías web modernas.",
+    ],
+    descriptionEn: [
+      "Training in software development, systems architecture, and modern web technologies.",
+    ],
+    type: "education",
+  },
+  {
+    title: "Desarrollador Frontend Freelance",
+    titleEn: "Frontend Developer Freelance",
+    subtitle: "Remoto",
+    subtitleEn: "Remote",
+    date: "Enero 2022 – Presente",
+    dateEn: "January 2022 – Present",
+    description: [
+      "Lideré el diseño y desarrollo de una landing page completa para la ONG 'Viviendo Mi Gran Sueño', implementando mejores prácticas SEO que resultaron en un aumento del tráfico orgánico y un diseño completamente accesible.",
+      "Desarrollé plataforma full-stack que permitió a más de 80 estudiantes de periodismo de la universidad UCA publicar y gestionar noticias sobre eventos universitarios. Implementé un sistema de autenticación seguro y un panel de administración.",
+      "Diseñé y construí una experiencia 3D inmersiva utilizando Three.js y R3F, incrementando el tiempo de permanencia de los usuarios en la página significativamente.",
+    ],
+    descriptionEn: [
+      "Led the design and development of a complete landing page for the NGO 'Viviendo Mi Gran Sueño', implementing SEO best practices that resulted in increased organic traffic and a fully accessible design.",
+      "Developed a full-stack platform enabling over 80 journalism students at UCA university to publish and manage news about campus events. Implemented a secure authentication system and admin panel.",
+      "Designed and built an immersive 3D experience using Three.js and R3F, significantly increasing user engagement time on the page.",
+    ],
+    type: "work",
+  },
+  {
+    title: "Formación Complementaria",
+    titleEn: "Additional Training",
+    subtitle: "Desarrollo Web y 3D",
+    subtitleEn: "Web Development & 3D",
+    date: "Febrero 2022 – Presente",
+    dateEn: "February 2022 – Present",
+    description: [
+      "Desarrollo Web Frontend Avanzado",
+      "Frameworks de JavaScript Modernos",
+      "Escalabilidad de proyectos",
+      "Diseño de Interfaces de Usuario",
+      "Desarrollo de Experiencias 3D",
+    ],
+    descriptionEn: [
+      "Advanced Frontend Web Development",
+      "Modern JavaScript Frameworks",
+      "Project Scalability",
+      "User Interface Design",
+      "3D Experience Development",
+    ],
+    type: "formation",
   },
 ];

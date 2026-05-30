@@ -1,5 +1,6 @@
 ---
 import type { Locale } from "@/types";
+import ExperienceList from "./ExperienceList";
 
 interface Props {
   locale: Locale;
@@ -8,13 +9,27 @@ interface Props {
 const { locale } = Astro.props;
 
 const translations = {
-  es: {},
-  en: {},
+  es: {
+    title: "Experiencia",
+    subtitle: "Formación académica, proyectos freelance y aprendizaje continuo",
+  },
+  en: {
+    title: "Experience",
+    subtitle: "Academic background, freelance projects, and continuous learning",
+  },
 };
 ---
 
-<main class="p-4 w-full" id="experience">
-  <section class="flex max-w-5xl w-full gap-2 sm:gap-4 min-h-dvh py-24">
-    hola
+<main class="flex p-4 w-full items-center justify-center min-h-dvh" id="experience">
+  <section class="flex flex-col w-full max-w-5xl gap-2 sm:gap-4 py-24">
+    <article class="text-center mb-8">
+      <h1 class="text-4xl font-semibold text-sea-nymph-800 mb-2">
+        {translations[locale].title}
+      </h1>
+      <p class="text-sea-nymph-500 text-sm">
+        {translations[locale].subtitle}
+      </p>
+    </article>
+    <ExperienceList client:load locale={locale} />
   </section>
 </main>

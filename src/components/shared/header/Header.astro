@@ -13,10 +13,10 @@ const { locale } = Astro.props;
 
 <header class="bg-sea-nymph-50 p-4 sticky top-0 z-50">
   <section class="flex items-center justify-between mx-auto max-w-5xl">
-    <article class="flex items-center gap-2">
+    <a href="#home" class="flex items-center gap-2">
       <LuCodeXml className="text-2xl text-sea-nymph-600" />
       <div class="text-sea-nymph-600 font-bold text-xl">CastDev-j</div>
-    </article>
+    </a>
     <div class="flex items-center gap-8 lg:gap-12 lg:flex-row-reverse">
       <LanguageSelector locale={locale} client:load transition:persist />
       <Navigation locale={locale} client:load transition:persist />
