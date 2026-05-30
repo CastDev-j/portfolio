@@ -198,7 +198,7 @@ const CertificatesExperience: React.FC = () => {
 
   return (
     <article
-      className="w-full h-74 sm:h-114 relative"
+      className="w-full h-74 sm:h-114 relative mt-16"
       style={{ minWidth: 0, maxWidth: "100%" }}
     >
       <ScopedLoader />
