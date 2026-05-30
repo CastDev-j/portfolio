@@ -162,20 +162,9 @@ function SceneContent({
         color="#b7d8d5"
       />
       <Environment preset="city" />
-      <PresentationControls
-        enabled={true}
-        global={false}
-        cursor={true}
-        snap={true}
-        speed={1.5}
-        zoom={0.6}
-        rotation={[0, 0, 0]}
-        polar={[0, Math.PI / 3]}
-        azimuth={[-Math.PI / 3, Math.PI / 3]}
-      >
-        <Coin1 active={$currentCoin === "coin-1"} isMobile={isMobile} />
-        <Coin2 active={$currentCoin === "coin-2"} isMobile={isMobile} />
-      </PresentationControls>
+
+      <Coin1 active={$currentCoin === "coin-1"} isMobile={isMobile} />
+      <Coin2 active={$currentCoin === "coin-2"} isMobile={isMobile} />
     </>
   );
 }
