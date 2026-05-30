@@ -7,7 +7,7 @@ import React, {
   useCallback,
 } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useGLTF, Environment, PresentationControls } from "@react-three/drei";
+import { useGLTF, Environment } from "@react-three/drei";
 import { useStore } from "@nanostores/react";
 import { ScopedLoader } from "../shared/experience/ScopedLoader";
 import { currentCoin } from "@/store";
@@ -169,7 +169,7 @@ function SceneContent({
   );
 }
 
-const Experience: React.FC = () => {
+const CertificatesExperience: React.FC = () => {
   const $currentCoin = useStore(currentCoin);
   const [isMobile, setIsMobile] = useState(false);
   const [canvasKey, setCanvasKey] = useState(0);
@@ -229,4 +229,4 @@ const Experience: React.FC = () => {
 useGLTF.preload("/models/coin-1.glb");
 useGLTF.preload("/models/coin-2.glb");
 
-export default Experience;
+export default CertificatesExperience;

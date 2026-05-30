@@ -3,7 +3,7 @@ import type { Certificates, Socials } from "./types";
 export const routes = {
   home: "#home",
   certificates: "#certificates",
-  projects: "#projects",
+  experience: "#experience",
   contact: "#contact",
 };
 

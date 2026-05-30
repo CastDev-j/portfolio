@@ -5,13 +5,13 @@ import { IoMenu, IoClose } from "react-icons/io5";
 const translations = {
   es: {
     home: "Inicio",
-    projects: "Proyectos",
+    experience: "Experiencia",
     certificates: "Certificados",
     contact: "Contacto",
   },
   en: {
     home: "Home",
-    projects: "Projects",
+    experience: "Experience",
     certificates: "Certificates",
     contact: "Contact",
   },

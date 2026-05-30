@@ -1,0 +1,20 @@
+---
+import type { Locale } from "@/types";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const translations = {
+  es: {},
+  en: {},
+};
+---
+
+<main class="p-4 w-full" id="contact">
+  <section class="flex max-w-5xl w-full gap-2 sm:gap-4 min-h-dvh py-24">
+    hola Soy contacto
+  </section>
+</main>

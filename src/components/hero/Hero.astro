@@ -1,6 +1,6 @@
 ---
 import type { Locale } from "@/types";
-import Experience from "./Experience.tsx";
+import HeroExperience from "./HeroExperience.tsx";
 
 interface Props {
   locale: Locale;
@@ -15,7 +15,7 @@ const translations = {
       "Ingeniero en Sistemas Computacionales en formación, especializado en interfaces rápidas, accesibles y experiencias 3D interactivas. Con 3 años de experiencia en React, Next.js, Astro y Three.js, transformo ideas en productos digitales escalables con enfoque en rendimiento y UX.",
     descriptionShort:
       "Ingeniero en Sistemas Computacionales. Experto en React, Three.js y Astro. Creo experiencias web rápidas e inmersivas.",
-    cta: "Ver proyectos",
+    cta: "Mi Experiencia",
   },
   en: {
     hero: "Hi, I'm Andrés",
@@ -23,13 +23,13 @@ const translations = {
       "Computer Systems Engineering student, specializing in fast, accessible interfaces and interactive 3D experiences. With 3 years of experience in React, Next.js, Astro and Three.js, I transform ideas into scalable digital products focused on performance and UX.",
     descriptionShort:
       "Computer Systems Engineer. Expert in React, Three.js & Astro. I build fast, immersive web experiences.",
-    cta: "View projects",
+    cta: "My Experience",
   },
 };
 ---
 
 <div class="absolute top-0 left-0 w-full h-full z-0" id="home"></div>
-<main class="flex p-4 w-full items-center justify-center">
+<main class="flex p-4 w-full items-center justify-center min-h-[80vh]">
   <section
     class="flex max-w-5xl w-full lg:flex-row gap-2 sm:gap-4 flex-col-reverse"
   >
@@ -48,12 +48,13 @@ const translations = {
       </p>
 
       <a
-        href="#certificates"
-        class="bg-sea-nymph-500 text-white px-6 py-3 rounded-lg w-fit hover:bg-sea-nymph-600 transition-colors"
+        href="#experience"
+        aria-label={translations[locale].cta}
+        class="bg-sea-nymph-500 text-white px-6 py-3 rounded-lg w-fit hover:bg-sea-nymph-600 transition-colors z-10"
       >
         {translations[locale].cta}
       </a>
     </article>
-    <Experience transition:persist client:load />
+    <HeroExperience transition:persist client:load />
   </section>
 </main>

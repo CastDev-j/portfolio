@@ -136,7 +136,7 @@ function SceneContent({ isMobile }: { isMobile: boolean }) {
   );
 }
 
-const Experience: React.FC = () => {
+const HeroExperience: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [canvasKey, setCanvasKey] = useState(0);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -194,4 +194,4 @@ const Experience: React.FC = () => {
 
 useGLTF.preload("/models/laptop.glb");
 
-export default Experience;
+export default HeroExperience;
