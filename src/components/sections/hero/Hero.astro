@@ -1,0 +1,151 @@
+---
+import { t } from "@/lib/i18n";
+import type { Locale } from "@/types";
+import { socials } from "@/config";
+import HeroExperience from "./HeroExperience";
+import { BsDot } from "react-icons/bs";
+import { IoLocationSharp } from "react-icons/io5";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaEnvelope,
+  FaDownload,
+} from "react-icons/fa";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const socialIcons: Record<string, any> = {
+  email: FaEnvelope,
+  github: FaGithub,
+  linkedin: FaLinkedin,
+  "twitter-x": FaTwitter,
+};
+
+const techStack = [
+  "React",
+  "Next.js",
+  "TypeScript",
+  "JavaScript",
+  "Three.js",
+  "Astro",
+  "Tailwind",
+  "Node.js",
+  "Git",
+];
+---
+
+<div class="absolute top-0 left-0 w-full h-full z-0" id="home"></div>
+
+<main class="flex p-4 sm:p-6 w-full items-center justify-center min-h-[80vh]">
+  <section
+    class="flex max-w-5xl w-full lg:flex-row gap-6 lg:gap-10 flex-col-reverse"
+  >
+    <article
+      class="w-full flex flex-col gap-6 items-center justify-center text-center lg:items-start lg:text-left"
+    >
+      <h1
+        class="text-3xl lg:text-5xl font-semibold text-sea-nymph-800 flex flex-wrap items-center justify-center lg:justify-start"
+      >
+        <span class="text-sea-nymph-500">CastDev</span>
+        <BsDot className="text-sea-nymph-500" />
+        <span>Andrés Castillo</span>
+      </h1>
+
+      <div class="flex flex-col">
+        <p
+          class="flex flex-wrap font-light text-neutral-700 justify-center lg:justify-start leading-5"
+        >
+          <span class="text-sea-nymph-600 font-semibold">
+            {t(locale, "Desarrollador Frontend", "Frontend Developer")}
+          </span>
+          <span class="mx-2">&</span>
+          <span class="font-semibold">
+            {t(locale, "Ingeniero en Sistemas", "Systems Engineer")}
+          </span>
+        </p>
+
+        <p
+          class="flex items-center flex-wrap justify-center lg:justify-start gap-2 font-light text-neutral-700 text-sm"
+        >
+          <IoLocationSharp className="text-sea-nymph-500" />
+          <span class="flex items-center">
+            <span>Celaya, Guanajuato, México</span>
+            <BsDot className="text-sea-nymph-500" />
+            <span>GMT-6</span>
+          </span>
+        </p>
+      </div>
+
+      <p class="text-sea-nymph-600 text-lg leading-relaxed max-w-lg">
+        {
+          t(
+            locale,
+            "Construyo sitios web modernos y accesibles con tecnologías web de vanguardia.",
+            "I build modern, accessible websites using cutting-edge web technologies.",
+          )
+        }
+      </p>
+
+      <div class="flex flex-wrap gap-3 items-center z-10">
+        <a
+          href="#experience"
+          class="bg-sea-nymph-500 text-white px-6 py-3 rounded-lg font-medium text-sm hover:bg-sea-nymph-600 transition-colors"
+        >
+          {t(locale, "Mi Experiencia", "My Experience")}
+        </a>
+        <a
+          href="#contact"
+          class="bg-transparent text-sea-nymph-600 px-6 py-3 rounded-lg font-medium text-sm border-2 border-sea-nymph-300 hover:bg-sea-nymph-50 hover:border-sea-nymph-500 transition-colors"
+        >
+          {t(locale, "Contacto", "Contact")}
+        </a>
+      </div>
+
+      <div class="flex gap-3 z-10">
+        {
+          socials
+            .filter((s) => s.name !== "Email")
+            .map((social) => {
+              const Icon = socialIcons[social.icon];
+              if (!Icon) return null;
+              return (
+                <a
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.name}
+                  class="w-10 h-10 rounded-full bg-sea-nymph-100 flex items-center justify-center text-sea-nymph-600 hover:bg-sea-nymph-500 hover:text-white transition-all duration-300"
+                >
+                  <Icon />
+                </a>
+              );
+            })
+        }
+        <a
+          href="/doc/cv"
+          download
+          aria-label={t(locale, "Descargar CV", "Download CV")}
+          class="w-10 h-10 rounded-full bg-sea-nymph-100 flex items-center justify-center text-sea-nymph-600 transition-colors"
+        >
+          <FaDownload />
+        </a>
+      </div>
+
+      <div class="flex flex-wrap justify-center lg:justify-start gap-2 z-10">
+        {
+          techStack.map((tech) => (
+            <span class="px-2.5 py-1 rounded-md bg-sea-nymph-100/60 text-sea-nymph-600 text-xs font-medium">
+              {tech}
+            </span>
+          ))
+        }
+      </div>
+    </article>
+    <HeroExperience transition:persist client:load />
+  </section>
+</main>

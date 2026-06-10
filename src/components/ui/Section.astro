@@ -1,0 +1,33 @@
+---
+import { cn } from "@/lib/cn";
+
+interface Props {
+  id?: string;
+  bg?: boolean;
+  class?: string;
+  gap?: string;
+  fullHeight?: boolean;
+}
+
+const {
+  id,
+  bg,
+  class: className,
+  gap = "gap-2 sm:gap-4",
+  fullHeight = true,
+} = Astro.props;
+---
+
+<main
+  class={cn(
+    "flex p-4 w-full items-center justify-center",
+    fullHeight && "min-h-dvh",
+    bg && "bg-sea-nymph-50/50",
+    className,
+  )}
+  id={id}
+>
+  <section class={cn("flex flex-col w-full max-w-5xl py-24", gap)}>
+    <slot />
+  </section>
+</main>

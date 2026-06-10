@@ -9,7 +9,7 @@ import React, {
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useGLTF, Environment } from "@react-three/drei";
 import { useStore } from "@nanostores/react";
-import { ScopedLoader } from "../shared/experience/ScopedLoader";
+import { ScopedLoader } from "@/components/three/ScopedLoader";
 import { currentCoin } from "@/store";
 
 type Coin1GLTFResult = {

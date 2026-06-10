@@ -67,7 +67,7 @@ export default function CertificateList({ locale }: Props) {
             href={cert.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-4 p-4 sm:p-5 rounded-2xl sm:rounded-3xl bg-white/70 backdrop-blur-sm border border-sea-nymph-200 hover:border-sea-nymph-400 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+            className="group flex items-center gap-4 p-4 sm:p-5 rounded-2xl sm:rounded-3xl bg-white/70 backdrop-blur-sm border border-sea-nymph-200 hover:border-sea-nymph-400 hover:-translate-y-0.5 transition-all duration-300"
           >
             <img
               src={cert.logo}
@@ -106,7 +106,7 @@ export default function CertificateList({ locale }: Props) {
             className={cn(
               "w-9 h-9 rounded-full text-sm font-medium transition-all duration-300",
               p === safePage
-                ? "bg-sea-nymph-500 text-white shadow-md"
+                ? "bg-sea-nymph-500 text-white "
                 : "bg-sea-nymph-100 text-sea-nymph-600 hover:bg-sea-nymph-200",
             )}
           >

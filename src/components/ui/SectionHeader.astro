@@ -1,0 +1,37 @@
+---
+import { cn } from "@/lib/cn";
+import type { Locale } from "@/types";
+import { t } from "@/lib/i18n";
+
+interface Props {
+  locale: Locale;
+  title: string;
+  titleEn: string;
+  subtitle?: string;
+  subtitleEn?: string;
+  light?: boolean;
+}
+
+const { locale, title, titleEn, subtitle, subtitleEn, light } = Astro.props;
+---
+
+<article class={cn("text-center", !light && "mb-8")}>
+  <h1
+    class={cn(
+      "text-4xl font-semibold mb-2",
+      light ? "text-sea-nymph-50" : "text-sea-nymph-800",
+    )}
+  >
+    {t(locale, title, titleEn)}
+  </h1>
+  {subtitle && subtitleEn && (
+    <p
+      class={cn(
+        "text-sm",
+        light ? "text-sea-nymph-200" : "text-sea-nymph-500",
+      )}
+    >
+      {t(locale, subtitle, subtitleEn)}
+    </p>
+  )}
+</article>

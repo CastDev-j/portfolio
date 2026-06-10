@@ -8,7 +8,7 @@ import React, {
 } from "react";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { useGLTF, Environment, PresentationControls } from "@react-three/drei";
-import { ScopedLoader } from "../shared/experience/ScopedLoader";
+import { ScopedLoader } from "@/components/three/ScopedLoader";
 
 type GLTFResult = {
   nodes: {

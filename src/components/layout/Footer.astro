@@ -1,4 +1,5 @@
 ---
+import { t } from "@/lib/i18n";
 import type { Locale } from "@/types";
 import { LuCodeXml } from "react-icons/lu";
 
@@ -7,17 +8,6 @@ interface Props {
 }
 
 const { locale } = Astro.props;
-
-const translations = {
-  es: {
-    rights: "Todos los derechos reservados",
-    tag: "Diseñado y construido con",
-  },
-  en: {
-    rights: "All rights reserved",
-    tag: "Designed and built with",
-  },
-};
 ---
 
 <footer class="bg-sea-nymph-500 py-8">
@@ -28,13 +18,12 @@ const translations = {
     </div>
 
     <p class="text-sea-nymph-100 text-xs text-center">
-      &copy; {new Date().getFullYear()} Andrés Castillo Jiménez. {
-        translations[locale].rights
-      }.
+      &copy; {new Date().getFullYear()} Andrés Castillo Jiménez.{" "}
+      {t(locale, "Todos los derechos reservados", "All rights reserved")}.
     </p>
 
     <p class="text-sea-nymph-100 text-xs flex items-center gap-1">
-      {translations[locale].tag}
+      {t(locale, "Diseñado y construido con", "Designed and built with")}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="12"

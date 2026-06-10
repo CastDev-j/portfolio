@@ -1,7 +1,12 @@
 import { experiences } from "@/config";
 import type { Locale } from "@/types";
 import { cn } from "@/lib/cn";
-import { FaGraduationCap, FaBriefcase, FaBook, FaExternalLinkAlt } from "react-icons/fa";
+import {
+  FaGraduationCap,
+  FaBriefcase,
+  FaBook,
+  FaExternalLinkAlt,
+} from "react-icons/fa";
 
 interface Props {
   locale: Locale;
@@ -36,11 +41,14 @@ export default function ExperienceList({ locale }: Props) {
           const Icon = config.icon;
 
           return (
-            <div key={index} className="relative flex flex-col sm:flex-row gap-4 pb-12 last:pb-0">
+            <div
+              key={index}
+              className="relative flex flex-col sm:flex-row gap-4 pb-12 last:pb-0"
+            >
               <div className="hidden sm:flex flex-col items-center shrink-0">
                 <div
                   className={cn(
-                    "w-11 h-11 rounded-full flex items-center justify-center z-10 shadow-md",
+                    "w-11 h-11 rounded-full flex items-center justify-center z-10 ",
                     config.color,
                   )}
                 >
@@ -51,7 +59,7 @@ export default function ExperienceList({ locale }: Props) {
               <div className="sm:hidden flex items-center gap-3 mb-2">
                 <div
                   className={cn(
-                    "w-9 h-9 rounded-full flex items-center justify-center shadow-md",
+                    "w-9 h-9 rounded-full flex items-center justify-center ",
                     config.color,
                   )}
                 >
@@ -59,10 +67,16 @@ export default function ExperienceList({ locale }: Props) {
                 </div>
                 <span className="text-xs font-medium text-sea-nymph-500">
                   {item.type === "education"
-                    ? locale === "es" ? "Educación" : "Education"
+                    ? locale === "es"
+                      ? "Educación"
+                      : "Education"
                     : item.type === "work"
-                      ? locale === "es" ? "Experiencia" : "Experience"
-                      : locale === "es" ? "Formación" : "Training"}
+                      ? locale === "es"
+                        ? "Experiencia"
+                        : "Experience"
+                      : locale === "es"
+                        ? "Formación"
+                        : "Training"}
                 </span>
               </div>
 
@@ -93,19 +107,20 @@ export default function ExperienceList({ locale }: Props) {
                   </p>
 
                   <ul className="space-y-1.5">
-                    {(locale === "es" ? item.description : item.descriptionEn).map(
-                      (desc, i) => (
-                        <li
-                          key={i}
-                          className="text-sm text-sea-nymph-700 leading-relaxed flex gap-2"
-                        >
-                          <span className="text-sea-nymph-300 mt-1.5 shrink-0">
-                            {item.type === "formation" ? "•" : "▸"}
-                          </span>
-                          <span>{desc}</span>
-                        </li>
-                      ),
-                    )}
+                    {(locale === "es"
+                      ? item.description
+                      : item.descriptionEn
+                    ).map((desc, i) => (
+                      <li
+                        key={i}
+                        className="text-sm text-sea-nymph-700 leading-relaxed flex gap-2"
+                      >
+                        <span className="text-sea-nymph-300 mt-1.5 shrink-0">
+                          {item.type === "formation" ? "•" : "▸"}
+                        </span>
+                        <span>{desc}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
